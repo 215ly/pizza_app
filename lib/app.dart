@@ -14,7 +14,7 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.light(
           background: Colors.grey.shade200,
           onBackground: Colors.black,
-          primary: Colors.blue,
+          primary: Colors.transparent,  //App Bar default color
           onPrimary: Colors.white
         )
       ),
