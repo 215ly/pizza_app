@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pizza_app/details_screen.dart';
 
 class AppView extends StatelessWidget {
   const AppView({super.key});
@@ -76,7 +77,12 @@ class AppView extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           child: InkWell(
             borderRadius: BorderRadius.circular(20),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute<void>(builder: (BuildContext context) {
+                return const DetailsScreen();
+              }));
+            },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
