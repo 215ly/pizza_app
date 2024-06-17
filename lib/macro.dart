@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyMacroWidget extends StatelessWidget {
   final String title;
   final int value;
-  const MyMacroWidget({super.key, required this.title, required this.value});
+  final IconData icons;
+  const MyMacroWidget({super.key, required this.title, required this.value, required this.icons});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +27,8 @@ class MyMacroWidget extends StatelessWidget {
           padding: const EdgeInsets.all(6.0),
           child: Column(
             children: [
-              const Icon(
-                CupertinoIcons.airplane,
+              FaIcon(
+                icons,
                 color: Colors.redAccent,
               ),
               const SizedBox(height: 5,),
