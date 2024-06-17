@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pizza_app/macro.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -71,11 +72,15 @@ class DetailsScreen extends StatelessWidget {
                         ),
                       ],
                     ),
+                    const SizedBox(
+                      height: 12,
+                    ),
                     const Row(
                       children: [
                         MyMacroWidget(
                           title: 'Calories',
                           value: 267,
+                          icons: FontAwesomeIcons.fire,
                         ),
                         SizedBox(
                           width: 10,
@@ -83,6 +88,7 @@ class DetailsScreen extends StatelessWidget {
                         MyMacroWidget(
                           title: 'Protein',
                           value: 36,
+                          icons: FontAwesomeIcons.dumbbell,
                         ),
                         SizedBox(
                           width: 10,
@@ -90,6 +96,7 @@ class DetailsScreen extends StatelessWidget {
                         MyMacroWidget(
                           title: 'Fat',
                           value: 21,
+                          icons: FontAwesomeIcons.oilWell,
                         ),
                         SizedBox(
                           width: 10,
@@ -97,8 +104,32 @@ class DetailsScreen extends StatelessWidget {
                         MyMacroWidget(
                           title: 'Carbs',
                           value: 38,
+                          icons: FontAwesomeIcons.breadSlice,
                         ),
                       ],
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      child: TextButton(
+                        onPressed: () {},
+                        style: TextButton.styleFrom(
+                            elevation: 3.0,
+                            backgroundColor: Colors.black,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10))),
+                        child: const Text(
+                          'Buy Now',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      ),
                     )
                   ],
                 ),
